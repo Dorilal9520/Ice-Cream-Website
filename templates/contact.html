@@ -1,0 +1,176 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+    .contact-section{
+        padding:70px 0;
+        background:#f8f9fa;
+    }
+
+    .contact-card{
+        background:#fff;
+        border-radius:20px;
+        overflow:hidden;
+        box-shadow:0 10px 25px rgba(0,0,0,.1);
+    }
+
+    .left-box{
+        background:linear-gradient(135deg,#ff4d4d,#d60000);
+        color:#fff;
+        padding:50px;
+        height:100%;
+    }
+
+    .contact-info{
+        display:flex;
+        align-items:center;
+        margin-bottom:25px;
+    }
+
+    .contact-info i{
+        width:55px;
+        height:55px;
+        border-radius:50%;
+        background:#fff;
+        color:#d60000;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:22px;
+        margin-right:15px;
+    }
+
+    .ice-img{
+        width:100%;
+        border-radius:15px;
+        margin-top:25px;
+    }
+
+    .right-box{
+        padding:50px;
+    }
+
+    .right-box h2{
+        color:#d60000;
+        font-weight:bold;
+    }
+
+    .form-control{
+        border-radius:10px;
+        margin-bottom:20px;
+        height:50px;
+    }
+
+    textarea.form-control{
+        height:140px;
+        resize:none;
+    }
+
+    .btn-contact{
+        background:#d60000;
+        color:#fff;
+        border:none;
+        padding:12px 35px;
+        border-radius:30px;
+    }
+
+    .btn-contact:hover{
+        background:#a80000;
+        color:#fff;
+    }
+</style>
+
+<section class="contact-section">
+
+<div class="container">
+
+<div class="row contact-card">
+
+<div class="col-lg-5 left-box">
+
+<h2>🍦 Contact Us</h2>
+
+<p>
+Have a question, feedback or suggestion?<br>
+We'd love to hear from you.
+</p>
+
+<div class="contact-info">
+<i class="fa-solid fa-phone"></i>
+<div>
+<h6>Call Us</h6>
+<span>+91 9520158499</span>
+</div>
+</div>
+
+<div class="contact-info">
+<i class="fa-solid fa-envelope"></i>
+<div>
+<h6>Email</h6>
+<span>info@vadilal.com</span>
+</div>
+</div>
+
+<div class="contact-info">
+<i class="fa-solid fa-location-dot"></i>
+<div>
+<h6>Location</h6>
+<span>Agra, Uttar Pradesh, India</span>
+</div>
+</div>
+
+<img src="https://vadilalicecreams.com/_next/static/media/home_cafe.abea6370.jpg" class="ice-img">
+
+</div>
+
+<div class="col-lg-7 right-box">
+
+<h2>Send us a Message</h2>
+
+<p class="text-muted mb-4">
+Fill out the form below and our team will contact you soon.
+</p>
+
+<form method="POST" action="/contact">
+
+{% csrf_token %}
+
+<div class="row">
+
+<div class="col-md-6">
+<input type="text" name="name" class="form-control" placeholder="First Name" required>
+</div>
+
+<div class="col-md-6">
+<input type="text" name="lastname" class="form-control" placeholder="Last Name" required>
+</div>
+
+</div>
+
+<input type="email" name="email" class="form-control" placeholder="Email Address" required>
+
+<input type="text" name="phone" class="form-control" placeholder="Phone Number" required>
+
+<textarea name="desc" class="form-control" placeholder="Write Your Message" required></textarea>
+
+<button type="submit" class="btn btn-contact">
+<i class="fa-solid fa-paper-plane"></i>
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+{% endblock body %}
