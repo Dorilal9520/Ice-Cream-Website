@@ -7,8 +7,7 @@ env/
 .venv/
 
 db.sqlite3
-
 .env
-
 .vscode/
+
 staticfiles/
