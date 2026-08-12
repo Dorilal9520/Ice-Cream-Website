@@ -1,5 +1,122 @@
 {% extends 'base.html' %}
 
-{% block title %} About {% endblock title %}
+{% block title %}About{% endblock title %}
 
-{% block body %} This is my About block {% endblock body %}
+{% block body %}
+
+<!-- About Hero Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- Image -->
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="https://picsum.photos/700/450"
+                     class="img-fluid rounded shadow"
+                     alt="Ice Cream">
+            </div>
+
+            <!-- Content -->
+            <div class="col-md-6">
+                <h1 class="display-5 fw-bold mb-3">
+                    About Our Ice Cream
+                </h1>
+
+                <p class="lead">
+                    Welcome to our Ice Cream Website, where every scoop
+                    is made to bring happiness and freshness to your day.
+                </p>
+
+                <p>
+                    We believe that ice cream is more than just a dessert.
+                    It is a small moment of happiness that can make any
+                    occasion special. Our goal is to provide delicious,
+                    creamy and high-quality ice creams for everyone.
+                </p>
+
+                <p>
+                    From classic flavours to exciting new combinations,
+                    we focus on great taste, quality ingredients and
+                    customer satisfaction.
+                </p>
+
+                <a href="/contact/" class="btn btn-primary px-4">
+                    Contact Us
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Why Choose Us -->
+<section class="py-5 bg-light">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Why Choose Us?</h2>
+            <p class="text-muted">
+                We always try to give you the best ice cream experience.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm text-center p-4">
+                    <div class="card-body">
+                        <h4 class="fw-bold mb-3">🍦 Quality</h4>
+                        <p class="text-muted">
+                            We focus on quality ingredients and delicious
+                            flavours to provide a great ice cream experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm text-center p-4">
+                    <div class="card-body">
+                        <h4 class="fw-bold mb-3">❤️ Customer Satisfaction</h4>
+                        <p class="text-muted">
+                            Our customers are our priority. We always work
+                            to provide a satisfying and enjoyable experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm text-center p-4">
+                    <div class="card-body">
+                        <h4 class="fw-bold mb-3">✨ Great Taste</h4>
+                        <p class="text-muted">
+                            From classic favourites to exciting flavours,
+                            we aim to make every scoop memorable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Our Mission -->
+<section class="py-5">
+    <div class="container text-center">
+
+        <h2 class="fw-bold mb-3">Our Mission</h2>
+
+        <p class="lead mx-auto" style="max-width: 800px;">
+            Our mission is to make delicious ice cream accessible to
+            everyone while creating memorable moments through great
+            taste, quality and excellent service.
+        </p>
+
+    </div>
+</section>
+
+{% endblock body %}
